@@ -3,7 +3,7 @@ import { ArrowLeft, ArrowRight, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { getProduct, products, type Product } from "@/data/products";
 
-export const Route = createFileRoute("/products/$id")({
+export const Route = createFileRoute("/products_/$id")({
   loader: ({ params }) => {
     const product = getProduct(params.id);
     if (!product) throw notFound();
