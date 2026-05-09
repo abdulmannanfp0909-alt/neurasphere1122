@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import { motion } from "framer-motion";
+import halfEarth from "@/assets/half-earth.png";
 
 export function EarthHero() {
   return (
@@ -43,52 +44,31 @@ export function EarthHero() {
           </div>
         </motion.div>
 
-        {/* Dashboard preview */}
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-          className="relative mx-auto mt-16 max-w-5xl"
-        >
-          <div className="relative rounded-2xl border border-border glass p-2 shadow-2xl">
-            <div className="overflow-hidden rounded-xl bg-gradient-to-br from-secondary to-background">
-              <img
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=2000&q=80"
-                alt="Product dashboard preview"
-                className="aspect-[16/9] w-full object-cover opacity-90"
-              />
-            </div>
-            <div className="pointer-events-none absolute -inset-x-20 -bottom-20 h-40 bg-gradient-glow opacity-60 blur-3xl" />
-          </div>
-        </motion.div>
       </div>
 
       {/* Earth hemisphere rising */}
-      <div className="relative mt-20 h-[280px] overflow-hidden md:h-[420px]">
+      <motion.div
+        initial={{ opacity: 0, y: 80 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+        className="relative mt-20 h-[320px] overflow-hidden md:h-[520px] lg:h-[620px]"
+      >
         <div className="absolute left-1/2 top-0 aspect-square w-[180%] -translate-x-1/2 md:w-[140%] lg:w-[120%]">
           <div className="relative h-full w-full">
-            <div className="absolute inset-0 rounded-full bg-gradient-to-b from-[oklch(0.35_0.12_240)] via-[oklch(0.22_0.08_260)] to-[oklch(0.14_0.04_270)]" />
-            <div className="absolute inset-0 rounded-full opacity-60 mix-blend-screen"
-              style={{
-                background:
-                  "radial-gradient(circle at 30% 30%, oklch(0.7 0.18 215 / 0.5), transparent 40%), radial-gradient(circle at 70% 60%, oklch(0.6 0.22 295 / 0.4), transparent 45%)",
-              }}
+            <div className="absolute -inset-10 rounded-full bg-primary/30 blur-3xl" />
+            <img
+              src={halfEarth}
+              alt="Half Earth rising from space"
+              width={1920}
+              height={1080}
+              loading="lazy"
+              className="relative h-full w-full object-cover object-top"
             />
-            <div className="absolute inset-0 rounded-full border border-primary/20" />
-            <div className="absolute -inset-4 rounded-full bg-primary/20 blur-3xl" />
-            {/* meridians */}
-            {[0, 1, 2, 3, 4].map((i) => (
-              <div
-                key={i}
-                className="absolute inset-x-0 top-1/2 h-px bg-primary/15"
-                style={{ transform: `rotate(${i * 36}deg)` }}
-              />
-            ))}
           </div>
         </div>
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-background" />
-      </div>
+      </motion.div>
     </section>
   );
 }
