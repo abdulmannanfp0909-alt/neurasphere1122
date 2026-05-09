@@ -1,7 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { getProduct, products } from "@/data/products";
+import { getProduct, products, type Product } from "@/data/products";
 
 export const Route = createFileRoute("/products/$id")({
   loader: ({ params }) => {
@@ -45,7 +45,7 @@ export const Route = createFileRoute("/products/$id")({
 });
 
 function ProductDetail() {
-  const { product } = Route.useLoaderData();
+  const { product } = Route.useLoaderData() as { product: Product };
   const others = products.filter((p) => p.id !== product.id).slice(0, 3);
 
   return (
