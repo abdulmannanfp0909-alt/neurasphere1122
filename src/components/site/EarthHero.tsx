@@ -10,14 +10,19 @@ export function EarthHero() {
       <div className="absolute inset-0 grid-bg opacity-40" />
       <div className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-background to-transparent" />
 
-      <div className="relative mx-auto max-w-7xl px-6">
+      <div className="relative mx-auto max-w-7xl px-6 pb-24 md:pb-40">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="mx-auto max-w-4xl text-center"
+          className="relative mx-auto max-w-4xl text-center"
         >
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-x-0 -bottom-32 -z-10 mx-auto h-[420px] w-full max-w-[1200px] bg-no-repeat bg-bottom bg-contain opacity-90 md:-bottom-48 md:h-[620px]"
+            style={{ backgroundImage: `url(${halfEarth})` }}
+          />
           <span className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/50 px-3 py-1 text-xs text-muted-foreground">
             <span className="h-1.5 w-1.5 rounded-full bg-primary" /> Building the next decade of software
           </span>
@@ -43,24 +48,7 @@ export function EarthHero() {
             </Button>
           </div>
         </motion.div>
-
       </div>
-
-      {/* Earth hemisphere rising */}
-      <motion.div
-        initial={{ opacity: 0, y: 80 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-50px" }}
-        transition={{ duration: 1.2, ease: "easeOut" }}
-        className="relative mt-16 flex h-[260px] items-end justify-center overflow-hidden md:h-[420px] lg:h-[560px]"
-      >
-        <img
-          src={halfEarth}
-          alt="Earth rising from space"
-          loading="lazy"
-          className="pointer-events-none w-full max-w-[1200px] object-contain object-bottom"
-        />
-      </motion.div>
     </section>
   );
 }
