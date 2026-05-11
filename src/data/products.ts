@@ -17,7 +17,7 @@ export type Product = {
 };
 
 const img = (seed: string, w = 1600, h = 1000) =>
-  `https://images.unsplash.com/photo-${seed}?auto=format&fit=crop&w=${w}&h=${h}&q=80`;
+  `https://images.unsplash.com/photo-${seed}?auto=format&fit=crop&w=${w}&h=${h}&q=85`;
 
 export const products: Product[] = [
   {
@@ -25,7 +25,7 @@ export const products: Product[] = [
     name: "Lumen AI Workspace",
     category: "AI SaaS Platform",
     short: "An autonomous research workspace powered by multi-agent reasoning.",
-    cover: img("1677442136019-21780ecad995"),
+    cover: img("1551288049-bebda4e38f71"),
     featured: true,
     industry: "Enterprise SaaS",
     timeline: "16 weeks",
@@ -51,7 +51,7 @@ export const products: Product[] = [
     name: "Northwind Health",
     category: "Healthcare Platform",
     short: "HIPAA-grade telehealth platform serving 40k+ patients monthly.",
-    cover: img("1576091160399-112ba8d25d1d"),
+    cover: img("1576091160550-2173dba999ef"),
     featured: true,
     industry: "Healthcare",
     timeline: "22 weeks",
@@ -69,7 +69,7 @@ export const products: Product[] = [
     name: "Vertex Capital",
     category: "Fintech Dashboard",
     short: "Institutional-grade portfolio analytics with real-time risk modeling.",
-    cover: img("1611974789855-9c2a0a7236a3"),
+    cover: img("1642790106117-e829e14a795f"),
     featured: true,
     industry: "Finance",
     timeline: "18 weeks",
@@ -86,7 +86,7 @@ export const products: Product[] = [
     name: "Atlas Logistics OS",
     category: "Operations SaaS",
     short: "AI-driven dispatch and route optimization across 300+ fleets.",
-    cover: img("1601584115197-04ecc0da31d7"),
+    cover: img("1586528116311-ad8dd3c8310d"),
     featured: true,
     industry: "Logistics",
     timeline: "20 weeks",
@@ -103,7 +103,7 @@ export const products: Product[] = [
     name: "Halo Commerce",
     category: "Headless Commerce",
     short: "Composable storefront engine for premium DTC brands.",
-    cover: img("1483985988355-763728e1935b"),
+    cover: img("1556742049-0cfed4f6a45d"),
     featured: false,
     industry: "Retail",
     timeline: "14 weeks",
@@ -120,7 +120,7 @@ export const products: Product[] = [
     name: "Nimbus EdTech",
     category: "Learning Platform",
     short: "AI tutor and adaptive learning paths for K-12 districts.",
-    cover: img("1503676260728-1c00da094a0b"),
+    cover: img("1610484826967-09c5720778c7"),
     featured: false,
     industry: "Education",
     timeline: "24 weeks",
@@ -137,7 +137,7 @@ export const products: Product[] = [
     name: "Orbit IoT Cloud",
     category: "IoT & Industrial",
     short: "Real-time telemetry platform handling 12M events/min.",
-    cover: img("1518770660439-4636190af475"),
+    cover: img("1581092918056-0c4c3acd3789"),
     featured: false,
     industry: "Manufacturing",
     timeline: "26 weeks",
