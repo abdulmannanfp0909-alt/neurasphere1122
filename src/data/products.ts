@@ -16,8 +16,8 @@ export type Product = {
   gallery: string[];
 };
 
-const img = (seed: string, w = 1600, h = 1000) =>
-  `https://images.unsplash.com/photo-${seed}?auto=format&fit=crop&w=${w}&h=${h}&q=80`;
+const img = (id: string, w = 1600, h = 1000) =>
+  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&h=${h}&q=85`;
 
 export const products: Product[] = [
   {
