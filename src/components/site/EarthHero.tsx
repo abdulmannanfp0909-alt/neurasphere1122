@@ -52,16 +52,13 @@ export function EarthHero() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-50px" }}
         transition={{ duration: 1.2, ease: "easeOut" }}
-        className="relative mt-16 flex h-[180px] items-end justify-center overflow-hidden md:h-[280px] lg:h-[340px]"
+        className="relative mt-16 flex h-[260px] items-end justify-center overflow-hidden md:h-[420px] lg:h-[560px]"
       >
         <img
           src={halfEarth}
-          alt="Half Earth rising from space"
-          width={1200}
-          height={600}
+          alt="Earth rising from space"
           loading="lazy"
-          className="pointer-events-none w-[80%] max-w-[720px] object-contain object-bottom md:w-[60%]"
-          style={{ background: "transparent" }}
+          className="pointer-events-none w-full max-w-[1200px] object-contain object-bottom"
         />
       </motion.div>
     </section>
