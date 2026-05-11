@@ -6,7 +6,7 @@ import { featuredProducts } from "@/data/products";
 
 export function FeaturedProducts() {
   return (
-    <section className="relative -mt-24 md:-mt-32">
+    <section className="relative py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-12 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
           <div>

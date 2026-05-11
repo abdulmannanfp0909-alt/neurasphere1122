@@ -6,11 +6,17 @@ import halfEarth from "@/assets/half-earth.png";
 
 export function EarthHero() {
   return (
-    <section className="relative overflow-hidden border-t border-border bg-background pt-28 md:pt-40">
+    <section className="relative overflow-hidden border-t border-border bg-background pt-28 md:pt-40 pb-40 md:pb-64">
       <div className="absolute inset-0 grid-bg opacity-40" />
       <div className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-background to-transparent" />
 
-      <div className="relative mx-auto max-w-7xl px-6 pb-24 md:pb-40">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 bottom-0 mx-auto h-[420px] w-full max-w-[1400px] bg-no-repeat bg-bottom bg-contain opacity-90 md:h-[680px]"
+        style={{ backgroundImage: `url(${halfEarth})` }}
+      />
+
+      <div className="relative mx-auto max-w-7xl px-6">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -18,11 +24,6 @@ export function EarthHero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="relative mx-auto max-w-4xl text-center"
         >
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-x-0 -bottom-32 -z-10 mx-auto h-[420px] w-full max-w-[1200px] bg-no-repeat bg-bottom bg-contain opacity-90 md:-bottom-48 md:h-[620px]"
-            style={{ backgroundImage: `url(${halfEarth})` }}
-          />
           <span className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/50 px-3 py-1 text-xs text-muted-foreground">
             <span className="h-1.5 w-1.5 rounded-full bg-primary" /> Building the next decade of software
           </span>
