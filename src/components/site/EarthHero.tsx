@@ -43,6 +43,15 @@ export function EarthHero() {
             </Button>
           </div>
         </motion.div>
+
+        <div className="relative mt-12 md:mt-20">
+          <img
+            src={halfEarth}
+            alt="Half earth"
+            className="mx-auto block w-full max-w-[1400px] select-none"
+            draggable={false}
+          />
+        </div>
       </div>
     </section>
   );
