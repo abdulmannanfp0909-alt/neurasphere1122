@@ -43,13 +43,13 @@ export function Navbar() {
         }
       >
         <Link to="/" className="group flex items-center gap-2 shrink-0">
-          <div className="relative grid h-9 w-9 place-items-center rounded-lg bg-gradient-to-br from-primary to-accent">
-            <Sparkles className="h-4 w-4 text-primary-foreground" />
-            <span className="absolute inset-0 rounded-lg bg-primary/40 blur-md transition group-hover:bg-primary/60" />
-          </div>
-          <span className="font-display text-base font-semibold tracking-tight text-foreground">
-            NeuraSphere<span className="text-muted-foreground"> AI</span>
-          </span>
+          <img
+            src={logo}
+            alt="NeuraSphere AI logo"
+            className="h-9 w-auto md:h-10 select-none"
+            draggable={false}
+          />
+          <span className="sr-only">NeuraSphere AI</span>
         </Link>
 
         <div className="hidden md:block">
