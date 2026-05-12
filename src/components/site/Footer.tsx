@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { Sparkles, Github, Twitter, Linkedin, Mail } from "lucide-react";
+import { Github, Twitter, Linkedin, Mail } from "lucide-react";
+import logo from "@/assets/neurasphere-logo.png";
 
 export function Footer() {
   return (
@@ -8,10 +9,8 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-4">
         <div className="md:col-span-1">
           <Link to="/" className="flex items-center gap-2">
-            <div className="grid h-9 w-9 place-items-center rounded-lg bg-gradient-to-br from-primary to-accent">
-              <Sparkles className="h-4 w-4 text-primary-foreground" />
-            </div>
-            <span className="font-display text-base font-semibold">NeuraSphere AI</span>
+            <img src={logo} alt="NeuraSphere AI logo" className="h-10 w-auto" draggable={false} />
+            <span className="sr-only">NeuraSphere AI</span>
           </Link>
           <p className="mt-4 max-w-xs text-sm text-muted-foreground">
             We design and engineer AI-native products, scalable web apps, and digital experiences for ambitious teams.
