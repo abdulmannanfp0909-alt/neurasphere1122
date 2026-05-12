@@ -1,9 +1,10 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Menu, Sparkles } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NavTabs } from "@/components/ui/nav-tabs";
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@/components/ui/sheet";
+import logo from "@/assets/neurasphere-logo.png";
 
 const mobileLinks = [
   { to: "/", label: "Home" },
