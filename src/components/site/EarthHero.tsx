@@ -6,15 +6,9 @@ import halfEarth from "@/assets/half-earth.png";
 
 export function EarthHero() {
   return (
-    <section className="relative overflow-hidden border-t border-border bg-background pt-28 md:pt-40 pb-40 md:pb-64">
+    <section className="relative overflow-hidden border-t border-border bg-background pt-28 md:pt-40 pb-12 md:pb-16">
       <div className="absolute inset-0 grid-bg opacity-40" />
       <div className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-background to-transparent" />
-
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 bottom-0 mx-auto h-[420px] w-full max-w-[1400px] bg-no-repeat bg-bottom bg-contain opacity-90 md:h-[680px]"
-        style={{ backgroundImage: `url(${halfEarth})` }}
-      />
 
       <div className="relative mx-auto max-w-7xl px-6">
         <motion.div
