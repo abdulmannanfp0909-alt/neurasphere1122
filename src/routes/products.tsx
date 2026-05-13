@@ -64,28 +64,30 @@ function ProductsPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: (i % 6) * 0.04 }}
             >
-              <Link
-                to="/products/$id"
-                params={{ id: p.id }}
-                className="group block overflow-hidden rounded-2xl border border-border bg-card transition hover:border-primary/40"
-              >
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <img
-                    src={p.cover}
-                    alt={p.name}
-                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
-                </div>
-                <div className="p-6">
-                  <span className="text-xs uppercase tracking-widest text-muted-foreground">{p.category}</span>
-                  <h3 className="mt-2 font-display text-xl font-semibold">{p.name}</h3>
-                  <p className="mt-2 line-clamp-2 text-sm text-muted-foreground">{p.short}</p>
-                  <span className="mt-4 inline-flex items-center gap-1 text-sm text-foreground">
-                    View Project <ArrowUpRight className="h-4 w-4 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-                  </span>
-                </div>
-              </Link>
+              <TiltCard className="rounded-2xl">
+                <Link
+                  to="/products/$id"
+                  params={{ id: p.id }}
+                  className="group block overflow-hidden rounded-2xl border border-border bg-card transition hover:border-primary/40"
+                >
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <img
+                      src={p.cover}
+                      alt={p.name}
+                      className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
+                  </div>
+                  <div className="p-6">
+                    <span className="text-xs uppercase tracking-widest text-muted-foreground">{p.category}</span>
+                    <h3 className="mt-2 font-display text-xl font-semibold">{p.name}</h3>
+                    <p className="mt-2 line-clamp-2 text-sm text-muted-foreground">{p.short}</p>
+                    <span className="mt-4 inline-flex items-center gap-1 text-sm text-foreground">
+                      View Project <ArrowUpRight className="h-4 w-4 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                    </span>
+                  </div>
+                </Link>
+              </TiltCard>
             </motion.div>
           ))}
         </div>
