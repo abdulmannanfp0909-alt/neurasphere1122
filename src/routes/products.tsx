@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { products } from "@/data/products";
 import { CTASection } from "@/components/site/CTASection";
+import { TiltCard } from "@/components/ui/tilt-card";
 
 export const Route = createFileRoute("/products")({
   head: () => ({
