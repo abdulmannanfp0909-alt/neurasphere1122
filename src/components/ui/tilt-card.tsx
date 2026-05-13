@@ -82,7 +82,7 @@ export function TiltCard({
           className="pointer-events-none absolute inset-0 rounded-[inherit] opacity-0 transition-opacity duration-300"
           style={{
             opacity: isHovered ? 1 : 0,
-            background: `radial-gradient(circle at ${spotlightPos.x}% ${spotlightPos.y}%, hsl(var(--primary) / 0.18), transparent 60%)`,
+            background: `radial-gradient(circle at ${spotlightPos.x}% ${spotlightPos.y}%, color-mix(in oklab, var(--primary) 22%, transparent), transparent 60%)`,
           }}
         />
       )}
